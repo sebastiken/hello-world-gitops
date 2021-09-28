@@ -7,5 +7,5 @@ RUN go build -o hello-world .
 FROM alpine:3.14 AS final
 
 WORKDIR /app
-COPY --from=build /go/src/github.com/codeship/go-hello-world/hello.world .
+COPY --from=build /go/src/github.com/codeship/go-hello-world/hello-world .
 CMD ./hello-world
